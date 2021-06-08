@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "node ./preCommit.js",
+    "commit-msg": "node ./verifyCommit.js"
+  }
+}
