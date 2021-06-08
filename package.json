@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "chalk": "^4.1.1",
     "yorkie": "^2.0.0"
   },
   "gitHooks": {

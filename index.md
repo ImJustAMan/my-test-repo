@@ -95,6 +95,24 @@ mac 查看隐藏文件 `defaults write com.apple.finder AppleShowAllFiles -boole
 
   - 让git忽略文件
 
+- git hooks
+
+  - yorkie/husky
+  - pre-commit 在提交之前执行
+  - commit-msg 获取commit信息
+
+- pr (pull request)
+
+  - 其实主要用于协助第三方库开发
+
+- git 工作流程
+
+  - git workflow
+  - github workflow
+    - pull request
+    - code review 代码复查
+  - gitlab workflow
+
 1. 工作区 当前工作目录(初始化git仓库后)
    - git add <file>： 文件推送至暂存区 ↓
    - git rm --cached <file>：将文件从暂存区删除(会将文件重置为未追踪状态 同时会在暂存区生成一个deleted的状态)↑
@@ -108,3 +126,33 @@ mac 查看隐藏文件 `defaults write com.apple.finder AppleShowAllFiles -boole
 4. 远程仓库
    - git pull 将远端仓库文件拉取至本地仓库(工作区)
    - git fetch + git merge
+
+
+
+自动化
+
+- CI 持续集成
+  - 持续集成 主要会用于进行测试 代码格式化检查或者格式化操作等相关操作
+  - github action
+    - 工作流文件使用YAML格式 .yml
+
+- CD 持续交付
+
+
+
+YAML
+
+- yml文件 通过缩进表示层级关系 on.push
+  - yml文件缩进只能使用空格 禁止使用tab进行缩进
+
+- name 当前工作流的名字
+- on 控制action在合适执行
+  - push
+    - branches: [master]
+- jobs action需要执行的工作
+  - 声明对应工作 自行起名
+    - runs-on action执行时的一个虚拟机环境 ubuntu-latest
+    - steps action执行的步骤
+      - uses 对应action执行的预设代码 
+      - name 对应当前操作名字
+      - run 真实执行操作 yarn / yarn build
