@@ -1,10 +1,12 @@
 {
   "devDependencies": {
     "chalk": "^4.1.1",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
     "yorkie": "^2.0.0"
   },
-  "gitHooks": {
-    "pre-commit": "node ./preCommit.js",
-    "commit-msg": "node ./verifyCommit.js"
+  "scripts": {
+    "build": "webpack"
   }
 }

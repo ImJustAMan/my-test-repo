@@ -137,8 +137,10 @@ mac 查看隐藏文件 `defaults write com.apple.finder AppleShowAllFiles -boole
     - 工作流文件使用YAML格式 .yml
 
 - CD 持续交付
+  - github pages 开源 免费
 
-
+- ssh-keygen -t rsa -C "xxx@xxx.com"  创建密钥
+  - 生成密钥对 一个私钥 一个公钥
 
 YAML
 
